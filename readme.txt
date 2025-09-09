@@ -1,4 +1,4 @@
-
+//Docker is yet to use in this project. Setup and run instructions are for local environment only.
 1>Create & activate venv (windows)
 
 python -m venv .venv
@@ -36,4 +36,4 @@ alembic upgrade head
 8>Runn th app
 uvicorn app.main:app --reload
 
-
+//Docker is yet to use in this project. Setup and run instructions are for local environment only.
