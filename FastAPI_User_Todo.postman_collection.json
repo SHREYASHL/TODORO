@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "FastAPI User & Todo API",
+    "_postman_id": "1234-5678-91011",
+    "description": "Collection for testing signup, login and todos in FastAPI project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Shreyash\",\n  \"email\": \"shreyash@example.com\",\n  \"password\": \"1234\"\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/auth/signup", "protocol": "http", "host": ["127.0.0.1"], "port": "8000", "path": ["auth", "signup"] }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"shreyash@example.com\",\n  \"password\": \"1234\"\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/auth/login", "protocol": "http", "host": ["127.0.0.1"], "port": "8000", "path": ["auth", "login"] }
+      }
+    },
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Finish FastAPI project\",\n  \"description\": \"Submit before tomorrow\"\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/todos/", "protocol": "http", "host": ["127.0.0.1"], "port": "8000", "path": ["todos", ""] }
+      }
+    },
+    {
+      "name": "List Todos",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": { "raw": "http://127.0.0.1:8000/todos/", "protocol": "http", "host": ["127.0.0.1"], "port": "8000", "path": ["todos", ""] }
+      }
+    }
+  ]
+}
