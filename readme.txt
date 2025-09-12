@@ -1,4 +1,4 @@
-//Docker is yet to be configured in this project. Setup and run instructions are for local environment only.
+
 1>Create & activate venv (windows)
 
 python -m venv .venv
